@@ -1,0 +1,190 @@
+č.9
+Subject To \ poradi neni fixni
+vyroba: x_1 + 2x_2 <= 8
+baleni: 2 *x_1 + 1 * x_2 <= 6
+Maximize
+{3x_1+ } 2 * x_2 \ ucelova funkce s chybou
+Generals
+x_2 x_1 x_3
+Bounds
+0 <= x_1
+0 <= x_2
+End
+
+č.6
+\ uloha z uvodu zadani
+Subject To \ poradi neni fixni
+vyroba: x_1 + 2x_2 <= 8
+baleni: 2 *x_1 + 1 * x_2 <= 6
+Maximize
+3x_1*+* 2 * x_2 \ ucelova funkce s chybou
+Generals
+x_2 x_1 x_3
+Bounds
+0 <= x_1
+0 <= x_2
+End
+
+č.10
+\ uloha z uvodu zadani
+Subject To \ poradi neni fixni
+vyroba: x_1 + 2x_2 <= 8
+baleni: 2 *x_1 + 1 * x_2 <= 6
+Maximize
+3x_1+ 2 * {x_2] \ ucelova funkce s chybou
+Generals
+x_2 x_1 x_3
+Bounds
+0 <= x_1
+0 <= x_2
+End
+
+č.11
+\ uloha z uvodu zadani
+Subject To \ poradi neni fixni
+vyroba: x_1 + 2x_2 <= 8
+baleni: 2 *x_1 + 1 * x_2 <= 6
+Maximize
+3x_1+ 2 * x_2 \ ucelova funkce
+Generals
+x_2 x_1 x_3
+Bounds
+0 <= => x_1 \ error here!
+0 <= x_2
+End
+
+č.13
+Subject To \ poradi neni fixni
+vyroba: x_1 + 2x_2 <= 8
+baleni: 2 *x_1 + 1 * x_2 <= 6
+Maximize
+3x_1+ 2 * x_2
+Generals
+x_1
+Bounds
+0 <= x_1
+0 <= x_2
+End
+
+č.14
+\ uloha z http://najada.fav.zcu.cz/~ryjacek/students/ps/TGD2.pdf
+Subject To
+ca: (-2var_x + 1 * var_y) >= 2
+cb: var_x - [2var_y] >= 2
+Minimize
+var_x - var_y
+Generals
+var_x var_y
+Bounds
+var_x >= 0
+var_y >= 0
+End
+
+č.15
+Subject To
+ca: x + 2y >= 3
+cb: {2*x} + y >= 3
+Minimize
+x - y
+Generals
+x y
+Bounds
+x >= 0
+y >= 0
+End
+
+č.16
+Subject To
+ca: 2 * x + [[y]] >= 2
+cb: x + [[2y]] >= 2
+Minimize
+x - y
+Generals
+x y
+Bounds
+x >= 0
+y >= 0
+End
+
+
+č.17
+\ uloha z uvodu zadani
+Subject To \ poradi neni fixni
+vyroba: x_1 + 2x_2 <= 8
+baleni: 2 *x_1 + 1 * x_2 <= 6
+Maximize
+3x_1+ 2 * x_2
+Generals
+x_2 x_1
+Bounds
+0 <= x_1
+0 <= x_2
+
+č.18
+\ uloha z uvodu zadani
+Subject To
+vyroba: x_1 + 2x_2 <= 8
+baleni: ({2 *x_1} + [1 * x_2]) <= 6
+Maximize
+{3x_1}+ [2] * (((x_2)))
+Generals
+x_2 x_1 some_other_var
+Bounds
+0 <= x_1
+0 <= x_2
+End
+
+č.19
+\ uloha z http://najada.fav.zcu.cz/~ryjacek/students/ps/TGD2.pdf
+Subject To
+c1: x + y <= 12
+c2: x + 9y <= 72
+c3: x <= 9
+Maximize
+x + 2* y
+Generals
+x y z
+Bounds
+x >= 0
+y >= 0
+End
+
+č. 20
+Obsah vstupního souboru:
+\ uloha z http://najada.fav.zcu.cz/~ryjacek/students/ps/TGD2.pdf
+Subject To
+bound_a: 2x - y >= 2
+bound_b: x - 2y >= -2
+Minimize
+x - ([[y]])
+Generals
+x y
+Bounds
+x >= 0
+y >= 0
+End
+
+výsledky
+x = 2
+y = 2
+
+č.21
+\ uloha z http://najada.fav.zcu.cz/~ryjacek/students/ps/TGD2.pdf
+Subject To
+a: [{x} + (y)] = 3
+b: (y + z) = 2
+c: x + y + z >= 1
+Minimize
+x + 3y - 5z
+Generals
+x y z another_unused_variable
+Bounds
+z >= 0
+x >= 0
+y >= 0
+End
+
+výsledky č.21
+x = 3
+y = 0
+z = 2
